@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @board.height %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @board.width %>
+</p>
+
+<table>
+<tr></tr>
+<% (1.. @board.height).each do |i| %>
+    <tr>
+      <% (1.. @board.width).each do |j| %>
+        <td>x</td>
+      <% end %>
+    </tr>
+<% end %>
+
+</table>
+
+<%= link_to 'Edit', edit_board_path(@board) %> |
+<%= link_to 'Back', boards_path %>
